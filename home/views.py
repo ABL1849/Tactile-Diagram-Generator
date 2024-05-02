@@ -14,6 +14,8 @@ check = 0
 
 def index(request):
     return render(request, "index.html")
+def abc(request):
+    return render(request, "abc.html")
 
 def computeNormal(points):
 	direction = np.cross(points[1] - points[0], points[2] - points[0])
@@ -163,16 +165,16 @@ def process_image(request):
         print(faceCounter, cube.vectors.shape[0])
         stl_file_path = os.path.join(settings.MEDIA_ROOT, 'tactile.stl')
         cube.save(stl_file_path)  # Assuming `cube` is the STL object
+        print(stl_file_path)
 
         # Construct the file URL relative to the media root
         stl_file_url = os.path.join(settings.MEDIA_URL, 'tactile.stl')
+        print(stl_file_url)
 
         # Pass the file URL to the template for rendering
         check = 1
         context = {'stl_file_url': stl_file_url, 'check' : check}
         return render(request, 'upload.html', context)
-
-
     return render(request, 'upload.html')
 
 def text(request):

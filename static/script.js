@@ -76,3 +76,4 @@ function downloadAsImage() {
         document.body.removeChild(link);
     });
 }
+

@@ -10,6 +10,6 @@ urlpatterns = [
     path('index/', views.index, name = "index"),
     path('textBraille/', views.text, name = "textBraille"),
     path('upload/', process_image, name='upload'),
-    # path('', process_image, name='upload')
+    path('abc/', views.abc, name='abc')
     # path('', views.text, name='textBraille')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

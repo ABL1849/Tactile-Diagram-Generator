@@ -32,20 +32,22 @@
 /* ------------------------------------------------------------------ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
+body{
+    background-color: #000814;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 4.4rem;
-    padding: 0 2.5rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 3rem;
     position: relative;
     z-index: 9;
     position: fixed;
     top: 0;
-    background-color: #ffffff;
+    /* border-bottom: 1px solid #ffffff; */
+    background-color: #161D29;
 }
 
 a {
@@ -57,7 +59,7 @@ a {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.01em;
-    color: #4E9FFE;
+    color: #ffffff;
 }
 
 .navbar ul {
@@ -72,28 +74,23 @@ a {
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 0.01em;
-    color: #121213;
+    color: #ffffff;
     cursor: pointer;
 }
 
-.navbar ul li a:hover {
-    border-bottom: 2px solid #0077ff88;
-}
 
 .navbar ul li a.active {
-    color: #121213;
-    border-bottom: 2px solid #0077ffd7;
+    color: #FFD60A;
 }
 
 .navbar .signup_btn {
-    border: 2px solid #4E9FFE;
-    padding: 7px 12px;
-    border-radius: 1rem;
+    background-color: #707070;
+    color: #ffffff;
+    padding: .7rem 1.4rem;
+    border-radius: 0.6rem;
     font-family: 'Montserrat';
+    font-size: 1rem;
     font-weight: 700;
-    font-size: 0.9rem;
-    letter-spacing: 0.01em;
-    color: #000000;
 }
 
 .navbar .toggle_btn {
@@ -104,7 +101,7 @@ a {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #707070;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -115,12 +112,6 @@ a {
     text-decoration: none;
     display: block;
 }
-
-.dropdown:hover .dropdown-content a:hover {
-    border-bottom: none;
-    background-color: #a0ccff;
-}
-
 .dropdown:hover .dropdown-content a.active {
     border-bottom: none;
     background-color: #4398fa;
@@ -147,7 +138,7 @@ a {
     right: 25px;
     padding: 10px;
     border-radius: 100%;
-    background-color: #0075FF;
+    background-color: #1FA2FF;
 }
 
 .top-arrow:hover {
@@ -159,7 +150,7 @@ a {
 .hero {
     width: 100%;
     height: 90vh;
-    padding: 0 2.5rem;
+    padding: 0 3rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -181,30 +172,36 @@ a {
     font-size: 3.2rem;
     line-height: 4.5rem;
     letter-spacing: 0.015em;
-    color: #121213;
+    color: #F1F2FF;
 }
 
 .hero .hero-txt h1 span {
-    color: #0075FF;
+    color: #1FA2FF;
+    position: absolute;
+    padding-left: .8rem;
+}
+.hero_VI1{
+    opacity: 0;
+    transform: translateX(3rem);
 }
 
-.hero .hero-txt p {
+.para {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 1.8rem;
-    color: #121213;
+    color: #F1F2FF;
 }
 
 .hero .hero-txt div {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .hero .hero-txt div .cta-btn {
-    border: 2px solid #0075FF;
-    color: #0075FF;
-    padding: 10px 12px;
+    background-color: #161D29;
+    color: #e7e7e7;
+    padding: 1rem 2rem;
     border-radius: 0.6rem;
     font-family: 'Montserrat';
     font-size: 1rem;
@@ -212,8 +209,8 @@ a {
 }
 
 .hero .hero-txt div .cta-btn:first-child {
-    background-color: #0075FF;
-    color: #ffffff;
+    color: #000814;
+    background-color: #FFD60A;
 }
 
 .hero .hero-img {
@@ -228,48 +225,45 @@ a {
     width: 80%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ ABOUT SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-.about {
-    width: 100%;
-    height: 90vh;
-    padding: 0 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 .about>h2 {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 2rem;
     letter-spacing: 0.01em;
-    color: #0075FF;
+    color: #1FA2FF;
     text-align: center;
 }
 
 .about>div {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 2rem; */
 }
 
 .about>div>div {
     font-family: 'Roboto';
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 2rem;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
 }
-
+.first, .last{
+    display: flex;
+    justify-content: start;
+    border-left: 2px solid #fff;
+    /* padding: 0.5rem 2rem; */
+}
+.middle{
+    display: flex;
+    justify-content: end;
+    border-right: 2px solid #fff;
+    /* padding: 0.5rem 2rem; */
+}
 .about>div>div h2 {
     display: flex;
     height: 8rem;
     width: 8rem;
     align-items: center;
-    background-color: #a2cdff;
-    color: #000000;
+    background-color: #1FA2FF;
+    color: #F9F9F9;
 }
 
 .about>div>div h2#vision {
@@ -290,11 +284,61 @@ a {
 
 .about>div>div p {
     padding: 0.5rem;
-    background-color: rgba(18, 18, 19, 0.05);
-    margin-left: 110px;
-    margin-right: 56px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: #F9F9F9;
 }
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ ABOUT SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.about, .services {
+    height: 72vh;
+    margin: 0rem 2rem;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+}
+.about{
+    height: 90vh;
+    margin-top: 2rem;
+}
+
+.services>h2, .about>h2 {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 2.6rem;
+    margin: 4rem 0;
+    letter-spacing: 0.01em;
+    color: #1FA2FF;
+    text-align: center;
+}
+.about-services{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+.about-services .img-item{
+    width: 5rem;
+}
+.about-services .about-services-item{
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    flex-direction: column;
+}
+.about-services .about-services-item h3{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+    color: #F9F9F9;
+    text-align: center;
+}
+.about-services p{
+    font-size:1rem;
+    width: 80%;
+    text-align: center;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ FOOTER SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 footer .contact-container {
@@ -332,7 +376,7 @@ footer .contact-container>div .quick-links {
 
 footer .contact-container>div .quick-links a:hover {
     transition: 0.5s;
-    color: #0075FF;
+    color: #1FA2FF;
 }
 
 footer .contact-container>.nav-links {
@@ -340,7 +384,7 @@ footer .contact-container>.nav-links {
 }
 
 footer .contact-container>.nav-links .contact-info i {
-    color: #0075FF;
+    color: #1FA2FF;
 }
 
 footer .contact-container>.nav-links a {
@@ -374,7 +418,7 @@ footer .contact-container>.copyright {
 }
 
 footer .contact-container>.copyright span {
-    color: #0075FF;
+    color: #1FA2FF;
     font-weight: 700;
 }
 
@@ -400,7 +444,7 @@ hr {
 
 .hero-about {
     width: 100%;
-    height: 90vh;
+    /* height: 100vh; */
     padding: 0 2.5rem;
     display: flex;
     justify-content: space-evenly;
@@ -414,23 +458,27 @@ hr {
     font-weight: 500;
     font-size: 2rem;
     letter-spacing: 0.01em;
-    color: #0075FF;
+    color: #1FA2FF;
     text-align: center;
+    margin-top: 1.2rem;
 }
 
 .hero-about>p {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 1.1rem;
+    padding-bottom: 2rem;
     letter-spacing: 0.01em;
+    margin: 1rem auto;
     text-align: center;
+    color: #fff;
 }
 
 .hero-about>div {
-    width: 60%;
+    width: 32%;
     height: 30rem;
-    border-radius: 2rem;
-    background-color: #D9D9D9;
+    border-radius: .4rem;
+    /* background-color: #D9D9D9; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -439,7 +487,8 @@ hr {
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 0.01em;
-    color: #000000;
+    color: #fff;
+    border: dashed 2px #ffffff;
 
 }
 
@@ -448,42 +497,41 @@ hr {
 
 }
 
+#stl_cont{
+    width:600px;
+    height:600px;
+    margin:4.2rem auto;
+}
+
 .hero-about>div form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1.2rem;
 }
 
 .hero-about>div .select-btn {
-    padding: 7px;
-    border-radius: 0.6rem;
-    border: 2px solid #551A95;
-    background-color: #551A95;
+    width: 72%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: #161D29;
     color: #ffffff;
     cursor: pointer;
     display: flex;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: .9rem;
 }
 
-.hero-about>div .submit-btn {
-    padding: 10px 12px;
-    border-radius: 0.6rem;
-    border: 2px solid #551A95;
-    color: #551A95;
-    background-color: #ffffff;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.01em;
-    cursor: pointer;
-}
 
 .hero-about>div textarea {
-    width: 60%;
+    width: 72%;
     height: 10rem;
-    border-radius: 2rem;
+    border-radius: .4rem;
     padding: 1rem;
-    background-color: #ffffff;
+    border: none;
+    background-color: #161D29;
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 1rem;
@@ -492,12 +540,13 @@ hr {
     resize: none;
 }
 
-.hero-about>div button {
+.hero-about>div .form_btn {
+    border: none;
     padding: 10px 12px;
     border-radius: 0.6rem;
-    border: 2px solid #551A95;
-    color: #551A95;
-    background-color: #ffffff;
+    margin: .6rem;
+    background-color: #161D29;
+    color: #e7e7e7;
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 1rem;
@@ -505,13 +554,11 @@ hr {
     cursor: pointer;
 }
 
-.hero-about>div button:first-child {
-    padding: 10px 12px;
-    border-radius: 0.6rem;
-    border: 2px solid #551A95;
-    background-color: #551A95;
-    color: #ffffff;
+.hero-about>div .form_btn:first-child {
+    color: #000814;
+    background-color: #FFD60A;
 }
+
 
 .hero-about form label {
     padding: 0.5rem;
@@ -526,9 +573,29 @@ hr {
     width: 70%;
     font-size: 1.1rem;
     border-radius: 0.6rem;
-    border: 1px solid #551A95;
+    /* border: 1px solid #551A95; */
   }
 
 .hero-about form #generate {
     margin-top: 1rem;
+  }
+
+.dot{
+    opacity: 0;
+    font-size: 4rem;
+}
+.hero-about1 input{
+    width: 90%!important;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: #161D29;
+    color: #ffffff;
+}
+.hero-about1 form label {
+    width: 90%;
+  }
+.hero-about1 .submit-btn{
+    background-color: #FFD60A;
+    color: #000814;
   }
