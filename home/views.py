@@ -1,4 +1,5 @@
 import os
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.conf import settings
 import numpy as np
@@ -13,9 +14,8 @@ import cv2 as cv
 check = 0
 
 def index(request):
+    return HttpResponse("<h1> Hello World</h1>")
     return render(request, "index.html")
-def abc(request):
-    return render(request, "abc.html")
 
 def computeNormal(points):
 	direction = np.cross(points[1] - points[0], points[2] - points[0])
