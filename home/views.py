@@ -14,7 +14,6 @@ import cv2 as cv
 check = 0
 
 def index(request):
-    return HttpResponse("<h1> Hello World</h1>")
     return render(request, "index.html")
 
 def computeNormal(points):
